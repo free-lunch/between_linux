@@ -2,7 +2,9 @@
 #Between for linux
 
 This is between console messenger for linux.
+
 It is simplified version supported string message and emotion.
+
 It was made for only private purpose.
 
 
