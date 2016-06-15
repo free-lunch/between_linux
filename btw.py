@@ -1,21 +1,21 @@
 #-*- coding: utf-8 -*-
 
 
-import sys
+import sys, os
 import threading
 import time
 import json
-import os
+import getpass
 
-from lib_between.client import Client
-from lib_between.bot import Bot
+from lib.client import Client
+from lib.bot import Bot
 
 import message_model
 from utils import rjust, transColor, getTerminalSize
 
-ID = "jjh783@gmail.com"
-PW = "zmstkfka1"
-client = Client(ID, PW)
+ID = None
+PW = None
+client = None
 lastest_receive_time = 0
 lovers_color = '\033['+'97'+'m' # default : WHITE
 
@@ -91,6 +91,14 @@ def waitTyping(client):
 
 
 if __name__ == '__main__':
+    if ID == None:
+        ID = raw_input("ID : ")
+
+    if PW == None:
+        PW = getpass.getpass("PW : ")
+
+    client = Client(ID,PW)
+
     sz = getTerminalSize()
     screen_width = sz[0]
 
