@@ -11,7 +11,6 @@ It was made for only private purpose.
 
 # Preparing
 1. sudo pip install between
-2. python btw.py
 
 # Excution
 1. python btw.py
@@ -19,7 +18,7 @@ It was made for only private purpose.
 
 # Restriction
 1. Sticker was not supported (Only print a sticker number, Do not send)
-2. Emotion was not supoorted (Print string
+2. Emotion was not supoorted (Print and send only a string, ex. (메롱))
 
 #Reference
 It reference a [between library](https://github.com/carpedm20/between/)
