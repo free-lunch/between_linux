@@ -11,7 +11,7 @@ from lib.client import Client
 from lib.bot import Bot
 
 import message_model
-from utils import rjust, transColor, getTerminalSize
+from utils import rjust, transColor, getTerminalSize, get_url_title
 
 ID = None
 PW = None
@@ -87,6 +87,9 @@ def waitTyping(client):
         if input_line == "quit" or input_line == "exit":
             print("==== Success to exit ====")
             break
+        if input_line.find("http://") != -1 or input_line.find("https://") != -1:
+            input_line = get_url_title(input_line) +  " - " + input_line
+
         client.send(input_line)
 
 
