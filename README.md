@@ -14,6 +14,7 @@ It was made for only private purpose.
 
 # Preparing
 1. sudo pip install between
+2. sudo pip install BeautifulSoup
 
 # Excution
 1. python btw.py
